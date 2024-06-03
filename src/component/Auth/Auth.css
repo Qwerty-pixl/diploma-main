@@ -1,0 +1,34 @@
+button {
+  cursor: pointer;
+}
+.Auth .S-Out-Btn {
+  background-color: rgb(171, 33, 33);
+}
+.Auth .Btn-s {
+  justify-content: space-between;
+  display: flex;
+}
+
+.img-container img {
+  width: 50px;
+  border-radius: 25px;
+  display: flex;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.LogOut-img img {
+  width: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+}
+
+@media (max-width: 375px) {
+  .img-container img {
+    margin: 0 3px;
+  }
+}

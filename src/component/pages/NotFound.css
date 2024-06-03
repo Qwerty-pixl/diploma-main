@@ -1,0 +1,14 @@
+.NotFound h1 {
+  font-size: 50px;
+  margin: 25px 0 15px 10px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 375px) {
+  .NotFound {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,49 @@
+.AddProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  display: flex;
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="file"] {
+  width: 100%;
+  font-size: 11px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 50%;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .AddProduct {
+    width: 100%;
+  }
+}

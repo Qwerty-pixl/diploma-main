@@ -1,0 +1,50 @@
+.ProductList {
+  display: flex;
+  flex-direction: column;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.ProductList-auth {
+  margin-bottom: 20px;
+}
+
+.ProductList-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.Product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #dfdfdf;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Product img {
+  width: 210px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.Product a {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.Product span {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.Product button {
+  margin-top: 10px;
+}

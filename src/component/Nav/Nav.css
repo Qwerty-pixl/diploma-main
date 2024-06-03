@@ -1,0 +1,59 @@
+.Nav {
+  display: flex;
+  padding: 5px;
+  width: calc(100% - 330px);
+}
+
+.NavLink:hover,
+.NavLink:focus,
+.NavLink:focus-visible{
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: .1.1em;
+}
+
+.NavLink:active{
+  background: var(--c);
+  color: rgb(255, 255, 255);
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.NavUl {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  font-size: 22px;
+  justify-content: space-evenly;
+}
+
+.NavLink {
+  --b: 3px;
+  --s: .15em;
+  --c: #000000;
+  
+  padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .2em;
+  padding: 9px 25px;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: rgb(102, 102, 102);
+  font-weight: bold;
+}
+
+.Nav a:active {
+  color: rgb(255, 255, 255);
+}

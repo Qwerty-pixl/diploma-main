@@ -1,0 +1,277 @@
+/* .footer {
+  font-variant-caps: petite-caps;
+  padding: 40px 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.footer-content-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-content-down {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-section {
+  flex-basis: 30%;
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.footer-contact-list,
+.footer-social-list {
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-contact-item,
+.footer-social-item {
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer-social-item i {
+  font-size: 33px;
+}
+
+
+
+.footer-bottom {
+  margin-top: 40px;
+  background-color: #dfdfdf;
+  padding: 20px 0;
+}
+
+
+
+.footer-heading {
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.footer-list {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer-column .footer-list li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footer-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column .footer-list li a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  padding-left: 10px;
+  font-weight: 500;
+}
+
+.footer-column .footer-list li a:after {
+}
+
+.footer-column .footer-list li a:hover:after {
+}
+
+.GoUp {
+  width: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GoUp a {
+  text-decoration: none;
+}
+
+.icons {
+  text-align: end;
+}
+
+.GoUp i {
+  font-size: 34px;
+  color: #000;
+  margin: 0 10px;
+}
+
+.GoUp i:hover {
+  color: rgb(0, 63, 5);
+}
+
+@media (max-width: 375px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .footer-content {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-section {
+    flex-basis: 47%;
+  }
+  .GoUp {
+    position: fixed;
+    top: 600px;
+    right: 10px;
+  }
+  .footer-content-up .footer-heading {
+    margin: 20px 0 0 45px;
+  }
+  .footer-content-down .footer-heading {
+    margin: 20px 0 0 45px;
+  }
+  .footer-content-down .footer-social-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-content-down .footer-social-item {
+    margin-bottom: 15px;
+  }
+  .footer-content-down .footer-title {
+    margin-bottom: 23px;
+  }
+  .footer-content-down {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-bottom-text {
+    font-size: 10px;
+  }
+  .footer-bottom {
+    margin: 0;
+  }
+} */
+
+.footer {
+  margin-top: 25px;
+  background-color: #c2c2c2;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex-basis: 25%;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+}
+
+.footer-list a {
+  color: #000;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-list a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 8px;
+  background-color: rgb(0, 255, 21);
+  transform: scaleX(0);
+  transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.footer-list a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-social-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.footer-social-item {
+  margin-left: 15px;
+  font-size: 33px
+}
+
+.footer-social-item .facebook i {
+  color: blue;
+}
+
+.footer-social-item .instagram i {
+  color: red;
+}
+
+.footer-social-item .twitter i {
+  color: blue;
+}
+
+.footer-social-item .youtube i {
+  color: red;
+}
+
+.footer-bottom {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+.footer-bottom-text {
+  font-size: 14.5px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.GoUp {
+  text-align: right;
+  margin-top: 150px;
+}
+
+.GoUp i {
+  cursor: pointer;
+  font-size: 30px;
+}

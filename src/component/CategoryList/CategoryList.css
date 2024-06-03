@@ -1,0 +1,76 @@
+.CategoryList {
+  max-width: 500px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px rgba(8, 8, 8, 0.774) solid;
+}
+
+.CategoryList h3 {
+  font-size: 36px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.CategoryList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.CategoryList li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.CategoryList li a:hover {
+  background-color: rgb(90, 25, 25);
+  color: rgb(238, 232, 232);
+}
+
+@media (max-width: 1245px) {
+  .CategoryList {
+    width: 70%;
+  }
+  .CategoryList h3 {
+    font-size: 30px;
+    font-variant-caps: petite-caps;
+  }
+  .CategoryList li a {
+    font-size: 24px;
+    font-variant-caps: petite-caps;
+  }
+}
+
+@media (max-width: 375px) {
+  .CategoryList {
+    width: 60%;
+    margin-left: 12px;
+    padding: 15px;
+  }
+  .CategoryList h3 {
+    font-size: 18px;
+    font-variant-caps: petite-caps;
+    font-weight: bolder;
+  }
+  .CategoryList li a {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 0;
+  }
+  .CategoryList li a:hover {
+    background-color: rgb(90, 25, 25);
+    color: rgb(238, 232, 232);
+  }
+}

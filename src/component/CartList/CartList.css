@@ -1,0 +1,240 @@
+.CartList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-variant-caps: petite-caps;
+  margin-left: 10px;
+}
+
+.CartItem:hover {
+  box-shadow: 10px 12px 18px #000;
+  border:2px solid #000 ;
+}
+
+.CartItem {
+  width: 600px;
+  background-color: #c4c4c4;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+
+
+.CartItem img {
+  border: 2px solid #000;
+  padding: 5px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.CartItem .Card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.CartItem .Card-content a {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.Adition {
+  display: flex;
+}
+
+input {
+  text-align: center;
+}
+
+.Adition input[type="number"]::-webkit-inner-spin-button,
+.Adition input[type="number"]::-webkit-outer-spin-button {
+  --webkit-appearance: none;
+  padding: 5px;
+  font-size: 90%;
+  border-radius: 10px;
+  font-variant-caps: petite-caps;
+  border-color: #008000;
+  text-align: center;
+}
+
+.button-minus,
+.button-plus {
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.CartItem .Remove {
+  background-color: #0d5c1a;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Card-content span {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.CartItem .Remove:hover {
+  background-color: #000000;
+}
+
+.Cart .OrderForm{
+  margin: 10px 15px;
+  font-size: 17px;
+  text-decoration: underline;
+  font-variant-caps: petite-caps;
+  font-weight: 600;
+}
+
+@media (max-width: 930px) {
+  .CartItem {
+    width: 590px;
+    background-color: #c4c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 12px 18px #000;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .CartItem img {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .Cart .OrderForm{
+    margin: 10px 15px;
+    font-size: 17px;
+    text-decoration: underline;
+    font-variant-caps: petite-caps;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 880px) {
+  .CartItem {
+    max-width: 500px;
+    background-color: #c4c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 12px 18px #000;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .CartItem img {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .Cart .OrderForm{
+    margin: 10px 15px ;
+    font-size: 17px;
+    text-decoration: underline;
+    font-variant-caps: petite-caps;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 800px) {
+  .CartItem {
+    max-width: 460px;
+    background-color: #c4c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 12px 18px #000;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .CartItem img {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .Cart .OrderForm{
+    margin: 10px 15px;
+    font-size: 17px;
+    text-decoration: underline;
+    font-variant-caps: petite-caps;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 740px) {
+  .CartItem {
+    max-width: 420px;
+    background-color: #c4c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 12px 18px #000;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .CartItem img {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .Cart .OrderForm{
+    margin: 10px 15px;
+    font-size: 17px;
+    text-decoration: underline;
+    font-variant-caps: petite-caps;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 700px) {
+  .CartItem {
+    max-width: 410px;
+    background-color: #c4c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 12px 18px #000;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .CartItem img {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 130px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .Cart .OrderForm{
+    margin: 10px 15px;
+    font-size: 17px;
+    text-decoration: underline;
+    font-variant-caps: petite-caps;
+    font-weight: 600;
+  }
+}

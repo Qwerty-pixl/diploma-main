@@ -1,0 +1,56 @@
+.topbar-last-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.topbar-last-nav li {
+  margin-bottom: 50px;
+}
+
+.topbar-last-nav a:active{
+  background: var(--c);
+  color: rgb(255, 255, 255);
+}
+
+.topbar-last-nav a {
+  font-size: 20px;
+}
+
+.topbar-last-nav a:hover,
+.topbar-last-nav a:focus-visible{
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: .1.1em;
+}
+
+.topbar-last-nav a {
+  color: #000;
+  text-decoration: none;
+
+  --b: 3px;
+  --s: .15em;
+  --c: #000000;
+  
+  padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .2em;
+  padding: 9px 25px;
+}
+
+.topbar-last-nav a.active {
+  font-weight: bold;
+}
+
+@media (max-width: 375px) {
+  .topbar-last-nav a {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,50 @@
+/* .OrderList .Order {
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+.OrderList .Order img {
+  max-width: 60px;
+} */
+
+
+.OrderList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.OrderCard {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  transition: 0.5s;
+}
+.OrderCard:hover {
+  box-shadow: #a5a5a5 0 5px 5px 0;
+}
+
+.CartCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.CartCard img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.CartCard-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.OrderCard-cart {
+  margin-top: 20px;
+}

@@ -1,0 +1,38 @@
+.product-category {
+  margin-bottom: 30px;
+}
+
+.product-category h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.product img {
+  height: 200px;
+  width: 350px;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product .strikethrough {
+  margin-top: 5px;
+  text-decoration: line-through;
+}
+.product .price {
+  margin-left: 10px;
+}

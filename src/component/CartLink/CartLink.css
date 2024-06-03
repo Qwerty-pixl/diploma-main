@@ -1,0 +1,15 @@
+.CartLink {
+  align-items: center;
+}
+.CartLink a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  font-variant-caps: petite-caps;
+}
+.CartLink img {
+  filter: invert(3);
+  width: 50px;
+}
