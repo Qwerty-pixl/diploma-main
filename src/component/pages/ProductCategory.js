@@ -8,7 +8,7 @@ function ProductCategory({ category }) {
       <div className="product-list">
         {category.products.map((product) => (
           <div key={product.id} className="product">
-            <img src={product.image} alt={product.name} />
+            <img src={product.img} alt={product.name} />
             <h3>{product.name}</h3>
             <h3>{product.description}</h3>
             <p>

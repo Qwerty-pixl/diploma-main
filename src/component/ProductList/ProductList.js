@@ -12,11 +12,11 @@ export default function ProductList({ category }) {
   const output = products.filter(product => product.category === category.id)
   .map(product => (
     <div key={product.id} className="Product">
-      <img src={product.picture} alt={product.name} />
+      <img src={product.img} alt={product.name} />
       <NavLink to={'/products/' + product.slug}>
         {product.name}
       </NavLink>
-      <span>{product.price} som</span>
+      <span>{product.price} </span>
       <AddToCart product={product} />
       <DeleteProduct product={product} />
     </div>
