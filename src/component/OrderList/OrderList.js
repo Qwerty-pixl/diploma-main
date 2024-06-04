@@ -5,14 +5,30 @@ import "./OrderList.css";
 export default function OrderList() {
   const { orders, products } = useContext(AppContext);
 
-  if (!orders.length || !products.length) {
+  if (!orders || !products) {
     return "No orders found";
+  }
+
+  if (!Array.isArray(orders) || !Array.isArray(products)) {
+    return "Invalid data";
   }
 
   // Выводим все заказы
   const output = orders.map((order) => {
+    if (!order || typeof order !== 'object') {
+      return "Invalid order";
+    }
+
+    if (!order.cart || typeof order.cart !== 'object') {
+      return "Invalid cart";
+    }
+
     // Вывести содержимое корзины для этого заказа
     const cartOutput = Object.keys(order.cart).map((productId) => {
+      if (!productId) {
+        return "Invalid product id";
+      }
+
       const product = products.find((product) => product.id === productId);
 
       if (!product) {
@@ -34,7 +50,7 @@ export default function OrderList() {
     });
 
     return (
-      <div key={order.id} className="OrderCard">
+      <div key={order.id} className="OrderCart">
         <div>
           <strong>Name:</strong> {order.name}
         </div>
