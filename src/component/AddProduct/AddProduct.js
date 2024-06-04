@@ -7,8 +7,9 @@ import "./AddProduct.css";
 export default function AddProduct({ category }) {
   const { user } = useContext(AppContext);
   const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState("");
   const [picture, setPicture] = useState(null);
+  const [description, setDescription] = useState("");
 
   if (!user || !user.isAdmin) {
     return null;
@@ -26,14 +27,20 @@ export default function AddProduct({ category }) {
     const file = event.target.files[0];
     setPicture(file);
   }
+  
+  function onChangeDescription(event) {
+    setDescription(event.target.value);
+  }
 
   function onFormSubmit(event) {
     event.preventDefault();
 
     if (!picture) {
-      alert("Please upload a picture");
+      alert("Пожалуйста, загрузите изображение");
       return;
     }
+
+    // Вы можете добавить дополнительную проверку типа файла здесь, если необходимо
 
     uploadProductPhoto(picture)
       .then((pictureUrl) =>
@@ -42,25 +49,29 @@ export default function AddProduct({ category }) {
           name: name,
           price: Number(price),
           picture: pictureUrl,
+          description: description,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
       .then(() => {
         setName("");
-        setPrice(0);
+        setPrice("");
         setPicture(null);
+        setDescription("");
+        alert("Продукт успешно добавлен!");
       })
       .catch((error) => {
-        console.log("Failed to add product:", error);
+        console.error("Ошибка при добавлении продукта:", error);
+        alert("Не удалось добавить продукт. Пожалуйста, попробуйте позже.");
       });
   }
 
   return (
     <div className="AddProduct">
       <form onSubmit={onFormSubmit}>
-        <h3>Create a new product</h3>
+        <h3>Добавить новый продукт</h3>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Название:</label>
           <input
             type="text"
             id="name"
@@ -71,7 +82,7 @@ export default function AddProduct({ category }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="price">Price:</label>
+          <label htmlFor="price">Цена:</label>
           <input
             type="number"
             id="price"
@@ -82,17 +93,30 @@ export default function AddProduct({ category }) {
             required
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="picture">Picture:</label>
+          <label htmlFor="description">Описание:</label>
+          <input
+            type="text"
+            id="description"
+            value={description}
+            name="description"
+            onChange={onChangeDescription}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="picture">Изображение:</label>
           <input
             type="file"
-            id="picture"
-            name="picture"
+            id="file"
+            name="img"
             onChange={onChangePicture}
             required
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Отправить</button>
       </form>
     </div>
   );
