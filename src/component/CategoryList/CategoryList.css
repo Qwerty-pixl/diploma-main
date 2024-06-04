@@ -35,7 +35,7 @@
 }
 
 .CategoryList li a:hover {
-  background-color: rgb(90, 25, 25);
+  background-color: rgb(255, 253, 253);
   color: rgb(238, 232, 232);
 }
 
@@ -70,7 +70,7 @@
     padding: 8px 0;
   }
   .CategoryList li a:hover {
-    background-color: rgb(90, 25, 25);
+    background-color: rgb(228, 216, 216);
     color: rgb(238, 232, 232);
   }
 }
