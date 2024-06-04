@@ -62,7 +62,7 @@ input {
   font-size: 90%;
   border-radius: 10px;
   font-variant-caps: petite-caps;
-  border-color: #008000;
+  border-color: #060080;
   text-align: center;
 }
 
@@ -78,7 +78,7 @@ input {
 }
 
 .CartItem .Remove {
-  background-color: #0d5c1a;
+  background-color: #2f0d5c;
   color: #fff;
   border: none;
   padding: 8px 16px;
