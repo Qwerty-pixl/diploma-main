@@ -1,3 +1,4 @@
 .Logo img {
   width: 100px;
+  backdrop-filter:calc();
 }
