@@ -20,10 +20,15 @@ const Slider = ({ slides = [] }) => {
     setCurrentIndex(newIndex);
   };
 
+  console.log('Current Index:', currentIndex);
+  console.log('Current Slide URL:', slides[currentIndex]);
+
   return (
     <div className="slider">
       <button onClick={goToPrevious} className="arrow left">❮</button>
-      <div className="slide" style={{ backgroundImage: `url(${slides[currentIndex]})` }}></div>
+      <div className="slide">
+        <img src={slides[currentIndex]} alt="slide" className="slide-image" />
+      </div>
       <button onClick={goToNext} className="arrow right">❯</button>
     </div>
   );
