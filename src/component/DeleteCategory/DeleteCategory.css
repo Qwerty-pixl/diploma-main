@@ -1,0 +1,35 @@
+/* CSS for DeleteCategory component */
+.DeleteCategory {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .DeleteCategory:hover {
+    background-color: #d9363e;
+  }
+  
+  /* Animation for deleting */
+  @keyframes deleteAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  .DeleteCategory.deleting {
+    animation: deleteAnimation 0.5s ease forwards;
+  }
+  

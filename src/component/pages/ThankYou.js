@@ -3,7 +3,7 @@ import "./ThankYou.css";
 export default function ThankYou() {
 
   setTimeout(function () {
-    window.location.href = "https://bekbolsun.netlify.app";
+    window.location.href = "https://diploma-main-git-main-qwerty-pixls-projects.vercel.app";
   }, 5000)
 
   window.onload = function() {

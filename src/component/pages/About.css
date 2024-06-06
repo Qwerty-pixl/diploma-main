@@ -1,64 +1,61 @@
+.About {
+  padding: 20px;
+}
+
 .section-about {
-  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about_left {
+  flex: 1;
   text-align: center;
 }
 
-.section-title {
-  font-size: 26px;
-  font-variant-caps: petite-caps;
-  font-size: 22px;
-  text-decoration: underline;
+.about_left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.section-description {
-  font-size: 22px;
-  margin-bottom: 30px;
+.about_right {
+  flex: 1;
+  padding: 20px;
 }
 
-.values-title {
-  font-size: 24px;
+.about_right h2 {
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-.values-list {
-  list-style-type: disc;
-  padding-left: 20px;
+.about_right p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.value-item {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
 
-.About h1 {
-  font-size: 30px;
-  margin: 25px 0 15px 10px;
-  font-variant-caps: petite-caps;
-  font-weight: 500;
-}
-
-@media (max-width: 375px) {
-  .About {
-    max-width: 150px;
-  }
-  .section-about {
-    margin: 0 auto;
-  }
-  .About h2 {
-    font-size: 18px;
-  }
-  .About p {
-    font-size: 14px;
-    font-weight: normal;
-  }
-  .About li {
-    font-size: 14px;
-    font-weight: normal;
-    list-style-type: number;
+  .about_right {
+    padding: 20px 0;
   }
 }

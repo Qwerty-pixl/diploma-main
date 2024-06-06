@@ -1,4 +1,16 @@
-.Logo img {
+
+.logo {
+  position: relative;
+  width: 100px; /* Задайте размеры логотипа */
+  height: 100px;
+}
+
+.logo img {
   width: 100px;
-  backdrop-filter:calc();
+  height: 100%;
+  transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.logo:hover img {
+  transform: scale(1.1); /* Увеличение размера логотипа при наведении */
 }

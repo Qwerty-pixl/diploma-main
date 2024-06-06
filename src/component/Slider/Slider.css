@@ -1,0 +1,69 @@
+/* Основной контейнер слайдера */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+/* Стиль для каждого слайда */
+.slide {
+  width: 100%;
+  height: 400px; /* Изначальная высота для больших экранов */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.5s ease; /* Плавный переход между слайдами */
+}
+
+/* Стиль для стрелок */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5); /* Цвет фона стрелок */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Изменение цвета фона при наведении */
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Адаптивные стили */
+
+/* Малые устройства (телефоны) */
+@media (max-width: 600px) {
+  .slide {
+    height: 300px; /* Уменьшение высоты для телефонов */
+  }
+
+  .arrow {
+    padding: 5px; /* Уменьшение размера стрелок */
+  }
+}
+
+/* Средние устройства (планшеты) */
+@media (max-width: 900px) {
+  .slide {
+    height: 350px; /* Уменьшение высоты для планшетов */
+  }
+
+  .arrow {
+    padding: 8px; /* Немного уменьшение размера стрелок */
+  }
+}

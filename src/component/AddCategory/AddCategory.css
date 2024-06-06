@@ -1,0 +1,19 @@
+.AddCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+  

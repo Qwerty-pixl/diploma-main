@@ -1,59 +1,43 @@
+/* Define keyframes for the animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the .Nav class */
 .Nav {
-  display: flex;
-  padding: 5px;
-  width: calc(100% - 330px);
-}
-
-.NavLink:hover,
-.NavLink:focus,
-.NavLink:focus-visible{
-  --_p: 0px;
-  outline-color: var(--c);
-  outline-offset: .1.1em;
-}
-
-.NavLink:active{
-  background: var(--c);
-  color: rgb(255, 255, 255);
-}
-
-.Logo {
-  display: flex;
-  align-items: center;
+  width: 100%;
+  animation: slideIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
 }
 
 .NavUl {
-  list-style: none;
-  padding: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  width: 100%;
-  font-size: 22px;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.NavItem {
+  margin: 0;
 }
 
 .NavLink {
-  --b: 3px;
-  --s: .15em;
-  --c: #000000;
-  
-  padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-  color: var(--c);
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .2em;
-  padding: 9px 25px;
-}
-
-.Nav a {
   text-decoration: none;
-  color: rgb(102, 102, 102);
-  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for text and background color changes */
 }
 
-.Nav a:active {
-  color: rgb(255, 255, 255);
+.NavLink:hover {
+  color: #fff; /* Change text color on hover */
+  background-color: #333; /* Change background color on hover */
 }

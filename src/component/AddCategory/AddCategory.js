@@ -21,9 +21,7 @@ const AddCategory = () => {
     const name = category.trim();
 
     if (name.length < 5) {
-      alert("Please provide a category name with minimum length of 5 characters."
-      );
-
+      alert("Please provide a category name with minimum length of 5 characters.");
       return;
     }
 
@@ -40,13 +38,13 @@ const AddCategory = () => {
   return (
     <div className="AddCategory">
       <input 
-        size="15"
+        className="category-input"
         type="text" 
         placeholder="Category name" 
         onChange={onChangeCategory} 
         value={category}
       />
-      <button onClick={onAddCategory}>+</button>
+      <button className="add-button" onClick={onAddCategory}>+</button>
     </div>
   );
 };

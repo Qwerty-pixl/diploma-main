@@ -27,7 +27,7 @@ export default function Auth() {
               onClick={logIn}
               src={
                 user?.photoURL ||
-                "https://icon-library.com/images/my-profile-icon-png/my-profile-icon-png-3.jpg"
+                "https://static.thenounproject.com/png/3549890-200.png"
               }
               alt="Placeholder"
             />
