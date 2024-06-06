@@ -37,7 +37,10 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeIn 4s ease forwards; /* Анимация появления */
 }
+
 
 .overlay-text h1 {
   margin: 0;
@@ -69,5 +72,13 @@
   
   .overlay-text h1 {
     font-size: 2.5em; /* Уменьшение размера шрифта заголовка на планшетах */
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
