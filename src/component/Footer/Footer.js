@@ -155,11 +155,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container">
-          <p className="footer-bottom-text">
-            All rights reserved &copy; 2023 Online Store
-          </p>
-        </div>
+
       </div>
     </footer>
   );
