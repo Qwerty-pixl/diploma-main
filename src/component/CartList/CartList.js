@@ -26,10 +26,10 @@ export default function CartList() {
     .filter((product) => productIds.includes(product.id))
     .map((product) => (
       <div className="CartItem" key={product.id}>
-        <img src={product.picture} alt={product.name} />
+        <img src={product.img} alt={product.name} />
         <div className="Card-content">
           <Link to={"/product/" + product.slug}>{product.name}</Link>
-          <span>{cart[product.id] * product.price} som</span>
+          <span>{cart[product.id] * product.price} $</span>
           <div className="Adition">
             <button
               className="button-minus"
