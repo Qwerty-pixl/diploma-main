@@ -15,7 +15,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 0.5s ease; /* Плавный переход между слайдами */
 }
 
 /* Стиль для стрелок */
@@ -23,17 +22,12 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5); /* Цвет фона стрелок */
-  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
-}
-
-.arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Изменение цвета фона при наведении */
 }
 
 .arrow.left {
@@ -65,5 +59,12 @@
 
   .arrow {
     padding: 8px; /* Немного уменьшение размера стрелок */
+  }
+}
+
+/* Большие устройства (настольные компьютеры и большие экраны) */
+@media (min-width: 901px) {
+  .slide {
+    height: 400px; /* Стандартная высота для больших экранов */
   }
 }
