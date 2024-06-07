@@ -11,6 +11,7 @@ function ProductCategory({ category }) {
             <img src={product.img} alt={product.name} />
             <h3>{product.name}</h3>
             <h3>{product.description}</h3>
+            <h3>{product.smell}</h3>
             <p>
               Price:
               <span className="strikethrough">{product.price}</span>

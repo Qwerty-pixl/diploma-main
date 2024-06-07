@@ -10,6 +10,5 @@
   font-variant-caps: petite-caps;
 }
 .CartLink img {
-  filter: invert(3);
   width: 50px;
 }

@@ -17,6 +17,7 @@ import Cart from "./component/pages/Cart";
 import ThankYou from "./component/pages/ThankYou";
 import Orders from "./component/pages/Orders";
 import ProductCategory from "./component/pages/ProductCategory";
+import SearchResults from "./component/SearchResults/SearchResults";
 
 export const AppContext = createContext({
   categories: [],
@@ -27,6 +28,8 @@ export const AppContext = createContext({
   setCart: () => {}, // изменить содержимое корзинки
 
   user: null,
+  searchResults: [],
+  setSearchResults: () => {},
 });
 
 export default function App() {
@@ -36,7 +39,7 @@ export default function App() {
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem("cart")) || {};
   });
-
+  const [searchResults, setSearchResults] = useState([]);
   const [user, setUser] = useState(null);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -59,7 +62,8 @@ export default function App() {
   return (
     <div className="App">
       <AppContext.Provider
-        value={{ categories, products, cart, setCart, user, orders }}
+        value={{ categories, products, cart, setCart, user, orders  , searchResults,
+          setSearchResults,}}
       >
         <Layout>
           <Routes>
@@ -74,6 +78,8 @@ export default function App() {
             <Route path="/thank-you" element={<ThankYou />} />
 
             <Route path="*" element={<NotFound />} />
+            <Route path="/search-results" element={<SearchResults />} /> {/* Add this line */}
+
           </Routes>
         </Layout>
       </AppContext.Provider>

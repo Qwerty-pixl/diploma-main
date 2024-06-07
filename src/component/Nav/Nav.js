@@ -18,7 +18,7 @@ export default function Nav() {
         </li>
         <li className="NavItem">
           <NavLink to="/orders" className="NavLink">
-            Orders
+            Contacts
           </NavLink>
         </li>
         <li className="NavItem">

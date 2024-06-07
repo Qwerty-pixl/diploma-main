@@ -8,6 +8,7 @@ import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import NavToggle from "../NavToggle/NavToggle";
 import "./Layout.css";
+import Search from "../Search/Search";
 
 export default function Layout(props) {
 
@@ -28,7 +29,9 @@ export default function Layout(props) {
           <Auth />
           <CartLink />
         </ul>
+        <Search /> {/* Встроенный поиск */}
       </header>
+      
       <aside>
         <CategoryList />
       </aside>

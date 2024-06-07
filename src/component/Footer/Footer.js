@@ -49,7 +49,7 @@ function Footer() {
               <li>
                 <a
                   className="phone"
-                  href="tel:+996552005753"
+                  href="tel:+996502083688"
                   target="_blank"
                   rel="noopener noreferrer">
                     Contact
@@ -67,7 +67,7 @@ function Footer() {
               <li className="footer-contact-item">
                 <a
                   className="instagram"
-                  href="https://instagram.com/example"
+                  href="https://www.instagram.com/chanelofficial/"
                   target="_blank"
                   rel="noopener noreferrer">
                     Instagram
@@ -76,7 +76,7 @@ function Footer() {
               <li className="footer-contact-item">
                 <a
                   className="twitter"
-                  href="https:/twitter.com/example"
+                  href="https://x.com/chanel?mx=2"
                   target="_blank"
                   rel="noopener noreferrer">
                     Twitter
@@ -85,7 +85,7 @@ function Footer() {
               <li className="footer-contact-item">
                 <a
                   className="facebook"
-                  href="https:/facebook.com/example"
+                  href="https://www.facebook.com/chanel/?locale=ru_RU"
                   target="_blank"
                   rel="noopener noreferrer">
                     Facebook
@@ -108,7 +108,7 @@ function Footer() {
               <li className="footer-social-item">
                 <a
                   className="facebook"
-                  href="https://www.facebook.com/example"
+                  href="https://www.facebook.com/chanel/?locale=ru_RU"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -118,7 +118,7 @@ function Footer() {
               <li className="footer-social-item">
                 <a
                   className="instagram"
-                  href="https://www.instagram.com/example"
+                  href="https://www.instagram.com/chanelofficial/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -128,7 +128,7 @@ function Footer() {
               <li className="footer-social-item">
                 <a
                   className="twitter"
-                  href="https://www.twitter.com/example"
+                  href="https://x.com/chanel?mx=2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -138,7 +138,7 @@ function Footer() {
               <li className="footer-social-item">
                 <a
                   className="youtube"
-                  href="https://www.youtube.com/example"
+                  href="https://www.youtube.com/@CHANEL"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

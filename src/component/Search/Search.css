@@ -1,0 +1,30 @@
+.Search {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center; /* Центрирование вертикально */
+}
+
+.Search input {
+  flex: 1; /* Растягиваем весь доступный пространство */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem; /* Добавляем небольшой отступ между полем ввода и кнопкой */
+}
+
+.Search button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color:#f4bad0; /* Изменяем цвет фона */
+  color: #fff; /* Изменяем цвет текста */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Стили при наведении на кнопку */
+.Search button:hover {
+  background-color:#a96385; /* Изменяем цвет фона при наведении */
+  transition: 0.5s;
+}

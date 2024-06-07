@@ -1,0 +1,36 @@
+/* SearchResults.css */
+
+.SearchResults {
+    text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .product-item {
+    flex: 1 1 300px; /* Adjusts the item width and allows wrapping */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-item h2 {
+    text-decoration: none;
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+  }
+  
+  .product-item p {
+    text-decoration: none;
+    margin: 0.5rem 0 0;
+  }
+  

@@ -6,15 +6,23 @@
   margin: auto;
   overflow: hidden;
   padding-bottom: 40px;
+  height: 400px; /* Фиксированная высота */
 }
 
 /* Стиль для каждого слайда */
 .slide {
   width: 100%;
-  height: 400px; /* Изначальная высота для больших экранов */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%; /* Используем 100% от высоты контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стиль для изображений */
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Стиль для стрелок */
@@ -22,8 +30,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: rgba(239, 178, 215, 0.5);
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -42,7 +49,7 @@
 
 /* Малые устройства (телефоны) */
 @media (max-width: 600px) {
-  .slide {
+  .slider {
     height: 300px; /* Уменьшение высоты для телефонов */
   }
 
@@ -53,7 +60,7 @@
 
 /* Средние устройства (планшеты) */
 @media (max-width: 900px) {
-  .slide {
+  .slider {
     height: 350px; /* Уменьшение высоты для планшетов */
   }
 
@@ -64,7 +71,7 @@
 
 /* Большие устройства (настольные компьютеры и большие экраны) */
 @media (min-width: 901px) {
-  .slide {
+  .slider {
     height: 400px; /* Стандартная высота для больших экранов */
   }
 }

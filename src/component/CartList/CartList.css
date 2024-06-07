@@ -58,11 +58,10 @@ input {
 .Adition input[type="number"]::-webkit-inner-spin-button,
 .Adition input[type="number"]::-webkit-outer-spin-button {
   --webkit-appearance: none;
-  padding: 5px;
+  padding: 50px;
   font-size: 90%;
   border-radius: 10px;
   font-variant-caps: petite-caps;
-  border-color: #008000;
   text-align: center;
 }
 

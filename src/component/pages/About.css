@@ -1,12 +1,15 @@
+/* Общие стили */
 .About {
   padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
 .section-about {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 0;
+  padding: 0 0;
 }
 
 .container {
@@ -41,12 +44,153 @@
 .about_right h2 {
   font-size: 2em;
   margin-bottom: 20px;
+  color: #fb93e4;
 }
 
 .about_right p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+/* Стили секции "Creators" */
+.creators-section {
+  padding: 40px 0;
+  background: #f9f9f9;
+}
+
+.creators-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* .creator-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px;
+  width: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.creator-card:hover {
+  transform: rotateY(10deg);
+} */
+.creator-card {
+  width: 250px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.creator-card:hover {
+  transform: translateY(-10px) rotateY(10deg) rotateX(10deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.creator-card img {
+  width: 100%;
+  height: auto;
+}
+
+.creator-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.creator-info h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.creator-info p {
+  font-size: 1em;
+  color: #666;
+}
+
+.creator-placeholder {
+  padding: 15px;
+  text-align: center;
+  font-size: 1em;
+  color: #666;
+}
+
+/* Стили секции FAQ */
+.faq-section {
+  padding: 40px 0;
+  background: #f9f9f9;
+  width: 100%;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2em;
+}
+
+.accordion {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 1.2em;
+  background: #f7f7f7;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.accordion-button:hover {
+  background: #e6e6e6;
+}
+
+.accordion-button.active {
+  background: #e6e6e6;
+  transform: rotateX(10deg);
+}
+
+.accordion-content {
+  padding: 15px;
+  background: #fff;
+  font-size: 1em;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }
 
 /* Адаптивные стили */
@@ -58,4 +202,5 @@
   .about_right {
     padding: 20px 0;
   }
+
 }

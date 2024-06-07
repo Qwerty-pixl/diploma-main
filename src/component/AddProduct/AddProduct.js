@@ -9,6 +9,7 @@ export default function AddProduct({ category }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [picture, setPicture] = useState(null);
+  const [smell, setSmell] = useState("");
 
   if (!user || !user.isAdmin) {
     return null;
@@ -17,7 +18,9 @@ export default function AddProduct({ category }) {
   function onChangeName(event) {
     setName(event.target.value);
   }
-
+  function onChangeSmell(event) {
+    setSmell(event.target.value);
+  }
   function onChangePrice(event) {
     setPrice(event.target.value);
   }
@@ -40,6 +43,7 @@ export default function AddProduct({ category }) {
         addDoc(productsCollection, {
           category: category.id,
           name: name,
+          smell: smell,
           price: Number(price),
           picture: pictureUrl,
           slug: name.replaceAll(" ", "-").toLowerCase(),
@@ -50,6 +54,7 @@ export default function AddProduct({ category }) {
         setPrice(0);
         setPicture(null);
       })
+      
       .catch((error) => {
         console.log("Failed to add product:", error);
       });
@@ -67,6 +72,17 @@ export default function AddProduct({ category }) {
             value={name}
             name="name"
             onChange={onChangeName}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Smell:</label>
+          <input
+            type="text"
+            id="smell"
+            value={smell}
+            name="smell"
+            onChange={onChangeSmell}
             required
           />
         </div>
