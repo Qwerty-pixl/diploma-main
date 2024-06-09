@@ -1,168 +1,84 @@
 .Support {
   max-width: 800px;
-  padding-top: 13px;
-  margin-left: 26px;
-}
-
-.Support h2{
-  display: flex;
-  justify-content: center;
-  font-variant-caps: petite-caps;
-  font-size: 26px;
-}
-
-.Support h3 {
-  font-variant-caps: petite-caps;
-  font-size: 22px;
-}
-
-.Support li {
-  list-style: none;
-}
-
-.Support ul {
-  padding: 0;
-  font-size: 19px;
-}
-
-p {
-  font-style: italic;
-  font-size: 20px;
-  font-weight: 400;
-  padding: 0 15px;
-}
-
-.Links li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.Links li a {
-  color: #000;
-  text-decoration: none;
-  position: relative;
-  padding-left: 10px;
-}
-
-.Links li a:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -2px;
-  left: 8px;
-  background-color: rgb(0, 255, 21);
-  transform: scaleX(0);
-  transition: transform 1s ease, opacity 0.5s ease;
-}
-
-.Links li a:hover:after {
-  transform: scaleX(1);
-}
-
-.Support h1 {
-  font-size: 30px;
-  margin: 25px 0 15px 10px;
-  font-variant-caps: petite-caps;
-  font-weight: 500;
-}
-
-@media (max-width: 375px) {
-  .Support {
-    max-width: 150px;
-    margin-left: 12px;
-  }
-  .Support p {
-    padding: 0 5px;
-    font-size: 14px;
-  }
-  .Support h2 {
-    font-size: 20px;
-  }
-  .Support h3 {
-    font-size: 18px;
-  }
-  .Links li a {
-    font-size: 14px;
-  }
-  .Links svg {
-    width: 10%;
-  }
-}
-.Support {
-  max-width: 800px;
-  padding-top: 13px;
-  margin: 0 auto; /* Центрируем содержимое по горизонтали */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .Support h2 {
-  font-variant-caps: petite-caps;
-  font-size: 26px;
-  text-align: center; /* Центрируем заголовок */
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1s ease-in-out;
 }
 
 .Support h3 {
-  font-variant-caps: petite-caps;
-  font-size: 22px;
+  font-size: 1.8em;
+  color: #555;
+  margin-top: 20px;
+  animation: slideInFromRight 1s ease-in-out;
 }
 
 .Support p {
-  font-style: italic;
-  font-size: 20px;
-  font-weight: 400;
-  padding: 0 15px;
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.Support ul {
-  padding: 0;
-  font-size: 19px;
-}
-
-.Links li {
-  list-style: none; /* Убираем маркеры списка */
-}
-
-.Links li a {
-  color: #000;
-  text-decoration: none;
-  position: relative;
-  padding-left: 10px;
-}
-
-.Links li a:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -2px;
-  left: 8px;
-  background-color: rgb(0, 255, 21);
-  transform: scaleX(0);
-  transition: transform 1s ease, opacity 0.5s ease;
-}
-
-.Links li a:hover:after {
-  transform: scaleX(1);
-}
-
-@media only screen and (max-width: 375px) {
-  .Support {
-    max-width: 100%; /* Изменяем максимальную ширину для маленьких устройств */
-    padding: 10px; /* Добавляем отступы для содержимого */
-    margin: 0; /* Убираем левый отступ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.Support h2, .Support h3, .Support p {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
   .Support h2 {
-    font-size: 20px;
+    font-size: 2em;
   }
-  
+
   .Support h3 {
-    font-size: 18px;
+    font-size: 1.5em;
   }
-  
+
   .Support p {
-    font-size: 16px;
-    padding: 0 10px; /* Уменьшаем отступы по бокам */
+    font-size: 1em;
   }
 }
