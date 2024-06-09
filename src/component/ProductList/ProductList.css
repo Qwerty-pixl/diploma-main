@@ -1,7 +1,8 @@
 /* ProductList.css */
 
 .ProductList {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   justify-content: center;
   padding: 16px;
@@ -14,7 +15,7 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 16px;
+  padding: 12px;
   width: 100%;
   max-width: 200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -43,7 +44,7 @@
   color: #333;
   font-weight: bold;
   margin: 8px 0;
-  transition: color 0.2s;
+  /* transition: color 0.2s; */
 }
 
 .Product a:hover {
@@ -57,12 +58,13 @@
 
 @media (max-width: 600px) {
   .ProductList {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     padding: 8px;
   }
 
   .Product {
     max-width: 150px;
-    padding: 12px;
+    padding: 10px;
   }
 
   .Product a {
@@ -81,7 +83,7 @@
 
   .Product {
     max-width: 180px;
-    padding: 14px;
+    padding: 12px;
   }
 
   .Product a {
@@ -95,19 +97,20 @@
 
 @media (min-width: 1201px) {
   .ProductList {
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на большом экране */
     gap: 16px;
   }
 
   .Product {
-    max-width: 200px;
-    padding: 16px;
+    max-width: 180px;
+    padding: 12px;
   }
 
   .Product a {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .Product span {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
