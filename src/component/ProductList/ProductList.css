@@ -23,7 +23,7 @@
 
 .Product:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow for hover */
 }
 
 .Product:active {
@@ -38,6 +38,11 @@
   max-height: 240px; /* Increased max-height to match the wider cards */
   border-radius: 8px;
   object-fit: cover;
+  transition: transform 0.2s; /* Smooth transition for images */
+}
+
+.Product img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .Product .description {
@@ -64,6 +69,7 @@
 .Product .price {
   color: #555;
   font-size: 18px;
+  font-weight: bold; /* Make price bold */
   margin-bottom: 8px;
 }
 
