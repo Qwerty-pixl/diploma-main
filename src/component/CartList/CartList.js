@@ -7,7 +7,7 @@ export default function CartList() {
   const { products, cart, setCart } = useContext(AppContext);
 
   function onQuantityChange(product, qty) {
-    const newQty = Math.max(qty, 1); // Убедиться, что количество не меньше 1
+    const newQty = Math.max(qty, 1); // Ensure quantity is not less than 1
     setCart({
       ...cart,
       [product.id]: newQty,
@@ -51,7 +51,7 @@ export default function CartList() {
             </button>
           </div>
           <button className="Remove" onClick={() => onItemRemove(product)}>
-            Удалить
+           Delete
           </button>
         </div>
       </div>
@@ -62,10 +62,15 @@ export default function CartList() {
     return product ? total + product.price * cart[id] : total;
   }, 0);
 
+  const totalItems = productIds.reduce((total, id) => total + cart[id], 0);
+
   return (
     <div className="CartList">
       {output}
-      <div className="TotalPrice">Total Price : {totalPrice} $</div>
+      <div className="CartSummary">
+        <div className="TotalItems">Total Items: {totalItems}</div>
+        <div className="TotalPrice">Total Price: {totalPrice} $</div>
+      </div>
     </div>
   );
 }
