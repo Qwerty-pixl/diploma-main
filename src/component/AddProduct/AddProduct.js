@@ -1,15 +1,17 @@
 import { useContext, useState } from "react";
+import "./AddProduct.css";
 import { AppContext } from "../../App";
 import { productsCollection, uploadProductPhoto } from "../../firebase";
 import { addDoc } from "firebase/firestore";
-import "./AddProduct.css";
 
 export default function AddProduct({ category }) {
   const { user } = useContext(AppContext);
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
-  const [picture, setPicture] = useState(null);
+  const [img, setPicture] = useState(null);
   const [smell, setSmell] = useState("");
+  const [description, setDescription] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!user || !user.isAdmin) {
     return null;
@@ -24,39 +26,47 @@ export default function AddProduct({ category }) {
   function onChangePrice(event) {
     setPrice(event.target.value);
   }
-
   function onChangePicture(event) {
     const file = event.target.files[0];
     setPicture(file);
+  }
+  function onChangeDescription(event) {
+    setDescription(event.target.value);
   }
 
   function onFormSubmit(event) {
     event.preventDefault();
 
-    if (!picture) {
+    if (!img) {
       alert("Please upload a picture");
       return;
     }
 
-    uploadProductPhoto(picture)
-      .then((pictureUrl) =>
+    setIsSubmitting(true);
+    uploadProductPhoto(img)
+      .then((imgUrl) =>
         addDoc(productsCollection, {
           category: category.id,
           name: name,
           smell: smell,
           price: Number(price),
-          picture: pictureUrl,
+          img: imgUrl,
+          description: description,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
       .then(() => {
         setName("");
-        setPrice(0);
+        setPrice(0.0);
         setPicture(null);
+        setDescription("");
+        setSmell("");
       })
-      
       .catch((error) => {
         console.log("Failed to add product:", error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
   }
 
@@ -64,51 +74,57 @@ export default function AddProduct({ category }) {
     <div className="AddProduct">
       <form onSubmit={onFormSubmit}>
         <h3>Create a new product</h3>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
+        <label>
+          Name:
           <input
             type="text"
-            id="name"
             value={name}
             name="name"
             onChange={onChangeName}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">Smell:</label>
+        </label>
+        <label>
+          Smell:
           <input
             type="text"
-            id="smell"
             value={smell}
             name="smell"
             onChange={onChangeSmell}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="price">Price:</label>
+        </label>
+        <label>
+          Price:
           <input
             type="number"
-            id="price"
             value={price}
             name="price"
+            step="any"
             onChange={onChangePrice}
             min={0}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="picture">Picture:</label>
+        </label>
+        <label>
+          Picture:
           <input
             type="file"
-            id="picture"
-            name="picture"
+            name="img"
             onChange={onChangePicture}
             required
           />
-        </div>
-        <button type="submit">Submit</button>
+        </label>
+        <label>
+          Description:
+          <textarea
+            name="description"
+            value={description}
+            onChange={onChangeDescription}
+            required
+          />
+        </label>
+        <button type="submit" disabled={isSubmitting}>{isSubmitting ? "Submitting..." : "Submit"}</button>
       </form>
     </div>
   );
