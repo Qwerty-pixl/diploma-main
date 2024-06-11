@@ -1,12 +1,23 @@
+/* Update Orders.css */
 .contacts-container {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%; /* Full width of the screen */
+  max-width: none; /* Remove max-width */
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.contacts-map {
+  margin-top: 20px;
+  width: 100%; /* Ensure the map container takes full width */
+  height: auto;
+}
+
+.contacts-map iframe {
+  width: 100%; /* Ensure the iframe takes full width */
+  height: 450px;
+}
 h2 {
   text-align: center;
   color: #333;
@@ -77,6 +88,7 @@ button[type="submit"] {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+ margin-right: 50px;
 }
 
 button[type="submit"]:disabled {
@@ -94,12 +106,3 @@ button[type="submit"]:disabled {
   color: #dc3545;
 }
 
-.contacts-map {
-  margin-top: 20px;
-}
-
-.contacts-map iframe {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}

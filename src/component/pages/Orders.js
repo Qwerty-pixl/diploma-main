@@ -23,8 +23,8 @@ const Orders = () => {
       setEmail('');
       setMessage('');
     } catch (error) {
-      setStatus('Error sending message');
-      console.error('Error sending message:', error);
+      setStatus('Произошла ошибка при отправке сообщения.');
+      console.error('Error:', error);
     } finally {
       setLoading(false);
     }
@@ -36,7 +36,7 @@ const Orders = () => {
       <div className="contact-info">
         <div className="contact-item">
           <h3>Our address</h3>
-          <p>City,street</p>
+          <p>City, street</p>
         </div>
         <div className="contact-item">
           <h3>Phone number</h3>
