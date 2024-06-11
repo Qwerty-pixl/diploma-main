@@ -26,7 +26,6 @@
 }
 
 .overlay-text {
-  
   color: white;
   text-align: center;
   padding: 20px;
@@ -34,7 +33,6 @@
   border-radius: 10px;
   left: 50%;
   top: 50%;
-  /* transform: translate(-50%, -50%); */
   opacity: 0; /* Initial transparency */
   animation: fadeIn 4s ease forwards; /* Fade-in animation */
 }
@@ -51,7 +49,6 @@
 
 .info-section {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
@@ -112,6 +109,36 @@
   animation-delay: 1.5s;
 }
 
+/* Cosmetics section */
+.cosmetics-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background: #fdfdfd;
+  width: 100%;
+}
+
+.cosmetics-image {
+  width: 50%; /* Adjust as needed */
+  max-width: 600px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cosmetics-text {
+  max-width: 600px;
+  text-align: left;
+  padding: 20px;
+}
+
+.cosmetics-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 /* Responsive Styles */
 
 /* Small devices (phones) */
@@ -135,6 +162,20 @@
   .info-block p {
     font-size: 1em;
   }
+
+  .cosmetics-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cosmetics-image {
+    width: 80%; /* Adjust as needed */
+    margin-bottom: 20px;
+  }
+
+  .cosmetics-text {
+    max-width: 100%;
+  }
 }
 
 /* Medium devices (tablets) */
@@ -153,5 +194,20 @@
 
   .info-block p {
     font-size: 1.1em;
+  }
+
+  .cosmetics-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cosmetics-image {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .cosmetics-text {
+    max-width: 80%;
   }
 }

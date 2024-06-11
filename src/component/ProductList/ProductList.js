@@ -16,7 +16,7 @@ export default function ProductList({ category }) {
         <NavLink to={`/products/${products.slug}`}>
           <img src={products.img} alt={products.name} />
         </NavLink>
-        <NavLink to={"/products/" + products.slug}>{products.name}</NavLink>
+        <NavLink to={`/products/${products.slug}`}>{products.name}</NavLink>
         <span>${products.price}</span>
         <AddToCart product={products} />
         <DeleteProduct product={products} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Home.css";
 import SliderComponent from '../Slider/Slider';
+import MyPhoto from "../../assets/chann.jpg"
 
 function Home() {
   const slides = [
@@ -23,17 +24,24 @@ function Home() {
         <SliderComponent slides={slides} />
       </div>
       <div className="info-section">
-        <div className="info-block">
+        <div className="info-block fade-in">
           <h2>Who We Are</h2>
           <p>Welcome to Nike Shop, your ultimate destination for trendy and high-quality sportswear. We are passionate about providing athletes and sports enthusiasts with top-notch products to enhance their performance and style.</p>
         </div>
-        <div className="info-block">
+        <div className="info-block fade-in">
           <h2>Our Mission</h2>
           <p>Our mission is to inspire and motivate individuals to reach their fitness goals by offering a wide range of athletic apparel, footwear, and accessories. We believe that everyone has the potential to push their limits and excel in their chosen sports.</p>
         </div>
-        <div className="info-block">
+        <div className="info-block fade-in">
           <h2>Our Values</h2>
-          <p>At Nike Shop, we value innovation, quality, and customer satisfaction. We work closely with athletes, designers, and experts to create products that combine cutting-edge technology, comfort, and style. </p>
+          <p>At Nike Shop, we value innovation, quality, and customer satisfaction. We work closely with athletes, designers, and experts to create products that combine cutting-edge technology, comfort, and style.</p>
+        </div>
+      </div>
+      <div className="cosmetics-section">
+        <img src={MyPhoto} alt="Cosmetics" className="cosmetics-image" />
+        <div className="cosmetics-text">
+          <p>Thanks to our cosmetics, you will always look amazing in the eyes of those around you, and most importantly, you will start to love yourself even more.</p>
+          <p>So beauties choose high-quality, good and most importantly at the best prices</p>
         </div>
       </div>
     </div>

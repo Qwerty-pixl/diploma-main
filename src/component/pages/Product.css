@@ -1,14 +1,4 @@
-/* .Product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-} */
+
 
 .Product h1 {
   font-size: 30px;
@@ -18,13 +8,7 @@
   text-align: center;
 }
 
-.Product img {
-  width: 300px; /* Задаем фиксированную ширину */
-  height: 300px; /* Задаем фиксированную высоту */
-  object-fit: cover; /* Сохраняем пропорции и обрезаем лишнее */
-  display: block;
-  margin: 20px 0;
-}
+
 
 .Product span {
   font-size: 24px;
@@ -34,13 +18,7 @@
   display: block;
 }
 
-.Product .description {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #666;
-  margin: 15px 0;
-  text-align: center;
-}
+
 
 @media (max-width: 375px) {
   .Product {
@@ -52,7 +30,4 @@
     font-size: 20px;
   }
 
-  .Product .description {
-    font-size: 14px;
-  }
 }

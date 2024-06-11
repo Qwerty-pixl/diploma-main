@@ -16,7 +16,7 @@ export default function DeleteProduct({ product }) {
       return;
     }
 
-    const picture = ref(storage, product.picture);
+    const picture = ref(storage, product.img);
     deleteObject(picture)
       .then(() => {
         deleteDoc(doc(db, "products", product.id));

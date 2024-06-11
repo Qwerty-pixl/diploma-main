@@ -1,53 +1,123 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Support.css";
 
 export default function Support() {
+  const [formData, setFormData] = useState({
+    recipientName: "",
+    senderName: "",
+    message: "",
+    price: "",
+    photo: null,
+  });
+  const [showCertificate, setShowCertificate] = useState(false);
+  const [photoURL, setPhotoURL] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "photo" && files.length > 0) {
+      setFormData({ ...formData, photo: files[0] });
+      setPhotoURL(URL.createObjectURL(files[0]));
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowCertificate(true);
+  };
+
   return (
     <div className="Support">
-      <h2>Delivery Information</h2>
-
-      <h3>Delivery Schedule</h3>
-      <p>
-        Delivery is available from Monday to Friday, 9:00 AM to 6:00 PM. We also
-        offer Saturday delivery from 10:00 AM to 4:00 PM.
+      <h2>How Can You Arrange Delivery?</h2>
+      <div className="steps">
+        <div className="step">
+          <h3>1</h3>
+          <p>First, to order, select the product that you liked in the basket so as not to lose it.</p>
+        </div>
+        <div className="step">
+          <h3>2</h3>
+          <p>Secondly, go to the shopping cart and make sure that you have chosen exactly what you wanted.</p>
+        </div>
+        <div className="step">
+          <h3>3</h3>
+          <p>In the third register, specify your address, email, and phone number for the order.</p>
+        </div>
+      </div>
+      <p className="note">
+        Once you have met all three points, you can expect your order.
+        Delivery is carried out during the day in the city and during the week in other regions.
+        Thank you for your purchase, wait for your order!!!
       </p>
 
-      <h3>Delivery Cost</h3>
-      <p>
-        The delivery cost is calculated based on the distance and weight of the
-        order. Please contact us for accurate information about the delivery
-        cost.
-      </p>
+      <h2>Gift Certificate</h2>
+      <form onSubmit={handleSubmit} className="gift-form">
+        <div>
+          <label htmlFor="recipientName">Recipient's Name:</label>
+          <input
+            type="text"
+            id="recipientName"
+            name="recipientName"
+            value={formData.recipientName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="senderName">Sender's Name:</label>
+          <input
+            type="text"
+            id="senderName"
+            name="senderName"
+            value={formData.senderName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label htmlFor="price">Price:</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            value={formData.price}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="photo">Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            onChange={handleChange}
+          />
+        </div>
+        <button type="submit">Generate Certificate</button>
+      </form>
 
-      <h3>Payment Options</h3>
-      <p>
-        We accept cash, credit cards, and electronic payment systems for
-        delivery orders.
-      </p>
-
-      <h3>Delivery Process Description</h3>
-      <p>
-        After placing your order, you will receive a confirmation to your
-        provided email address. The delivery will be made to the specified
-        address by our courier. Please be ready to accept the order and make
-        payment if cash on delivery is chosen.
-      </p>
-
-      <h3>Order Tracking</h3>
-      <p>
-        You will be able to track the status of your order on our website. You
-        will be provided with a unique order number that can be used to find out
-        the location of your order and the expected delivery time.
-      </p>
-
-      <h3>Returns and Exchanges Policy</h3>
-      <p>
-        If the product is damaged during delivery or does not meet your
-        expectations, please contact us within 24 hours of receiving the order
-        to arrange for a return or exchange. We will provide you with the
-        necessary information about the process and assist you with returning or
-        exchanging the product.
-      </p>
+      {showCertificate && (
+        <div className="certificate-preview">
+          <h3>Gift Certificate</h3>
+          <p>To: {formData.recipientName}</p>
+          <p>From: {formData.senderName}</p>
+          <p>Message: {formData.message}</p>
+          <p>Price: ${formData.price}</p>
+          {photoURL && <img src={photoURL} alt="Gift" className="certificate-photo" />}
+        </div>
+      )}
     </div>
   );
 }
